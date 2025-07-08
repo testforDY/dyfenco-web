@@ -1,0 +1,297 @@
+@media (max-width: 768px) {
+    .products-preview h2 {
+        font-size: 1.5rem;
+        display: block;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.4;
+        padding: 0 1rem;
+    }
+}
+
+/* ===== 基本設定 ===== */
+body {
+    margin: 0;
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* ===== 導覽列與 LOGO 分離樣式 ===== */
+.navbar-brand img {
+    height: 70px;
+    width: auto;
+}
+
+header.navbar {
+    background-color: #ffffff;
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+.form-select {
+    border-radius: 20px;
+    color: #7C2E24;
+}
+
+.btn-primary:hover {
+    background-color: #0d47a1;
+}
+
+.animate-fade {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar .nav-link {
+    color: #7C2E24;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #e8eaf6;
+    color: #3C4F76;
+    border-color: #c5cae9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    width: 250px;
+    text-align: center;
+}
+
+/* ===== 產品介紹區塊 ===== */
+.products-preview {
+    background-color: #fff;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .products-preview {
+        padding: 60px 10px;
+    }
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.product-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #7C2E24;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.product-item {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(124, 46, 36, 0.6);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.products-preview h2 {
+    color: #7C2E24;
+    text-align: center !important;
+    margin: 0 auto;
+}
+
+.product-item:hover {
+    transform: translateY(-4px);
+}
+
+.product-item img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    /* 調整文字大小 */
+    font-weight: 600;
+    /* 字體粗細 */
+    margin-top: 1rem;
+    /* 與圖片距離 */
+    margin-bottom: 0;
+    /* 底部空間 */
+    color: #7C2E24;
+    /* 主色文字 */
+}
+
+.product-item a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.product-item a:hover {
+    color: #0d47a1;
+    /* 滑過變色，可換你想要的 */
+}
+
+
+/* ===== 頁腳區塊 ===== */
+.footer {
+    background-color: #f8f8f8;
+    padding-top: 60px;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px 40px;
+    border-bottom: 1px solid #5C3A2E;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    flex: 1;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #7C2E24;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.footer-column a:hover {
+    background-color: #e8eaf6;
+    color: #0d47a1;
+    border-color: #c5cae9;
+}
+
+.footer-bottom {
+    color: #7C2E24;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+
+/* ===== 動畫效果：淡入滑入 ===== */
+.animate-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.animate-fade.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+
+.scroll-gallery img {
+    flex: 0 0 auto;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.scroll-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    color: #1a237e;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
