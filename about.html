@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>岱暉股份有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: #1a237e;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background: #fff;
+                padding: 10px 0;
+            }
+
+            .navbar nav.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
+        <div class="container">
+            <!-- 左側 Logo 與名稱 -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="IMG/logo.png" height="60" class="me-2" />
+            </a>
+
+            <!-- 導覽列開關（手機） -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 導覽列內容 -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+                <!-- 中間選單 -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="about.html">關於岱暉</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="products.html">產品介紹</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="contect.html">聯絡資訊</a></li>
+                </ul>
+
+                <!-- 右側搜尋欄與語言切換 -->
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control" type="search" placeholder="搜尋...">
+                    <select class="form-select w-auto">
+                        <option selected>繁體中文</option>
+                        <option value="en">English</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- About 主內容區 -->
+    <section class="about-section text-white text-center position-relative">
+        <div class="container position-relative z-1 py-5 animate-fade">
+            <h2 class="about-title fw-bold mb-4">關於岱暉</h2>
+            <p class="about-description fw-medium lh-lg px-3">
+                岱暉股份有限公司創立於1979年，由一群擁有豐富材料科學與封裝製程經驗的專家所創建，專注於電子焊接材料的研發與製造，持續為全球電子產業提供高品質、穩定可靠的原料來源。
+                我們的產品涵蓋錫膏、錫絲、錫條、助焊劑、錫陽極、預成型錫及電子構裝黏著劑等，廣泛應用於PCB構裝、車用電子、LED、半導體封裝、個人電腦、通訊產品等先進製程領域。
+                目前營運據點遍及台灣、中國、越南與印度，持續擴展全球布局，深耕在地服務。
+                <img src="IMG/ABOUT_1.png" alt="公司介紹圖" class="about-img img-fluid mt-5 rounded shadow">
+            </p>
+            <p class="about-description fw-medium lh-lg px-3">
+                岱暉擁有專業的配方技術與嚴謹的品質管控能力，能快速回應產業需求與客戶挑戰。2012年，我們創立了MORE電子實驗室，依據國際 IPC
+                標準設計實驗流程，提供完整的產品檢測、應用驗證與製程模擬，協助客戶提升良率與製造效率。
+            </p>
+            <p class="about-description fw-medium lh-lg px-3">我們深信：唯有穩定的品質、持續的創新與技術深耕，才能成為客戶長期信賴的夥伴。</p>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- 左側 LOGO -->
+                <div class="footer-logo-wrap">
+                    <a href="index.html">
+                        <img src="IMG/logo.png" alt="DYFENCO Logo" class="footer-logo">
+                    </a>
+                </div>
+
+                <!-- 右側連結 -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="about.html">關於岱暉</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="products.html">產品資訊</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="contect.html">聯絡我們</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 岱暉股份有限公司 All rights reserved.</p>
+                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜E-mail：leadfree@dyfenco.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

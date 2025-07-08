@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>岱暉股份有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Welding Materials.css">
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: #1a237e;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background: #fff;
+                padding: 10px 0;
+            }
+
+            .navbar nav.active {
+                display: flex;
+            }
+        }
+    </style>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .products-preview {
+            background-color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding-top: 60px;
+        }
+
+        .footer-bottom {
+            color: #7C2E24;
+            text-align: center;
+            padding: 20px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
+        <div class="container">
+            <!-- 左側 Logo 與名稱 -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="IMG/logo.png" height="60" class="me-2" />
+            </a>
+
+            <!-- 導覽列開關（手機） -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 導覽列內容 -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+                <!-- 中間選單 -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="about.html">關於岱暉</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="products.html">產品介紹</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="contect.html">聯絡資訊</a></li>
+                </ul>
+
+                <!-- 右側搜尋欄與語言切換 -->
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control" type="search" placeholder="搜尋...">
+                    <select class="form-select w-auto">
+                        <option selected>繁體中文</option>
+                        <option value="en">English</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="products-preview">
+        <div class="container">
+            <div class="row">
+                <!-- 左側分類清單 -->
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 rounded shadow-sm" style="background-color: #FAF4F0;">
+                        <h5 class="material-title text-center py-2 mb-3" style="border-radius: 6px;">
+                            焊接材料
+                        </h5>
+                        <div class="nav flex-column nav-pills" id="product-tabs" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-solderpaste-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-solderpaste" type="button" role="tab"
+                                aria-controls="v-pills-solderpaste" aria-selected="true">
+                                錫膏
+                            </button>
+                            <button class="nav-link" id="v-pills-solderbar-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-solderbar" type="button" role="tab"
+                                aria-controls="v-pills-solderbar" aria-selected="false">
+                                錫條
+                            </button>
+                            <button class="nav-link" id="v-pills-solderwire-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-solderwire" type="button" role="tab"
+                                aria-controls="v-pills-solderwire" aria-selected="false">
+                                錫絲
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側內容區塊 -->
+                <div class="col-md-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <!-- 錫膏 -->
+                        <div class="tab-pane fade show active" id="v-pills-solderpaste" role="tabpanel">
+                            <h2 class="mb-4 text-primary fw-bold">錫膏</h2>
+                            <p class="mb-4 fs-5">用於電子設備和半導體包裝的無鉛錫膏產品</p>
+
+                            <!-- 印刷用錫膏卡片 -->
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary mb-3">印刷用錫膏</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle">
+                                            <thead class="table-primary text-center">
+                                                <tr>
+                                                    <th>特性</th>
+                                                    <th>說明</th>
+                                                    <th>對應型號</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>低孔洞率</td>
+                                                    <td>平均孔洞率小於15%</td>
+                                                    <td>DWQ401、DWQ401UF、DWQ401PK</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>超細間距</td>
+                                                    <td>可使用T6、T7錫粉，適用微米構裝</td>
+                                                    <td>PN451</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>水溶性</td>
+                                                    <td>環境安定性佳、印刷特性優秀</td>
+                                                    <td>WS931、WS931PK</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>零鹵</td>
+                                                    <td>保證具有高穩定性</td>
+                                                    <td>QT459DE、QT459DEUF</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>細間距</td>
+                                                    <td>大量表面構裝製程解決方案</td>
+                                                    <td>PN436</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>低溫合金</td>
+                                                    <td>適用於錫/鉍、錫/鉍/銀之合金</td>
+                                                    <td>DWQ631、XT963</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>錫鉛合金</td>
+                                                    <td>適用於錫/鉛、錫/鉛/銀合金</td>
+                                                    <td>AM218FT</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>散熱模組</td>
+                                                    <td>高導熱設計專用</td>
+                                                    <td>HSXT996</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 針筒型錫膏卡片 -->
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary mb-3">針筒型錫膏</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle">
+                                            <thead class="table-primary text-center">
+                                                <tr>
+                                                    <th>特性</th>
+                                                    <th>對應型號</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>零鹵</td>
+                                                    <td>DS459DE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>低孔洞率</td>
+                                                    <td>DS401</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>雷射銲接</td>
+                                                    <td>DS436</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>散熱模組</td>
+                                                    <td>HSXT996</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-solderbar" role="tabpanel">
+                            <h2 class="mb-4 text-primary fw-bold">錫條</h2>
+                            <p class="fs-5">應用於波峰銲之合金，浮渣量比其他品牌低約 20%，可維持 7-8 小時錫爐鏡面。</p>
+
+                            <!-- 合金分類 -->
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary mb-3">合金分類</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle">
+                                            <thead class="table-primary text-center">
+                                                <tr>
+                                                    <th>分類</th>
+                                                    <th>成分與型號</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>高銀含量</td>
+                                                    <td>Sn/3.0Ag/0.5Cu — SAC305 (E9650)<br>Sn/3.0Ag — SAC305CX (9650CX)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>低銀含量</td>
+                                                    <td>Sn/0.3Ag/0.7Cu — SAC0307<br>Sn/0.3Ag — 0307CX</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>無銀含量</td>
+                                                    <td>Sn/0.7Cu/Ni — NAP100<br>Sn/Ni — NAP100CX</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 合金特性 -->
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary mb-3">合金特性比較</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle text-center">
+                                            <thead class="table-secondary">
+                                                <tr>
+                                                    <th>合金系統</th>
+                                                    <th>SAC305</th>
+                                                    <th>NAP100</th>
+                                                    <th>SAC0307</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>熔點</td>
+                                                    <td>217–218℃</td>
+                                                    <td>227℃</td>
+                                                    <td>217–227℃</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>密度</td>
+                                                    <td>7.4</td>
+                                                    <td>7.3</td>
+                                                    <td>7.3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>伸長量 (%)</td>
+                                                    <td>50</td>
+                                                    <td>41.2</td>
+                                                    <td>49</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>比熱</td>
+                                                    <td>219</td>
+                                                    <td>219</td>
+                                                    <td>170</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>熱傳導值 (W/m-K)</td>
+                                                    <td>57.15</td>
+                                                    <td>57</td>
+                                                    <td>57.36</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>電阻值</td>
+                                                    <td>12.1</td>
+                                                    <td>10.15</td>
+                                                    <td>12.1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>200 次循環 / 400 小時</td>
+                                                    <td>通過</td>
+                                                    <td>通過</td>
+                                                    <td>通過</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>840 次循環 / 400 小時</td>
+                                                    <td>通過</td>
+                                                    <td>通過</td>
+                                                    <td>通過</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1000–1500 次循環 / 400 小時</td>
+                                                    <td>通過</td>
+                                                    <td>通過</td>
+                                                    <td>通過</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>銲點</td>
+                                                    <td>較不光亮 (Sn/Cu)</td>
+                                                    <td>光亮</td>
+                                                    <td>較不光亮 (Sn/Cu)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>潤濕時間 (260℃)</td>
+                                                    <td>0.45 秒</td>
+                                                    <td>0.814 秒</td>
+                                                    <td>1.10 秒</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MB 系列錫條 -->
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary mb-3">MB 錫條與錫球</h4>
+                                    <p>特別為高溫環境（350–500℃）設計，具備強大抗氧化能力，浮渣量低 20%，可在 500℃ 錫爐中維持鏡面 1–1.5 小時。</p>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle">
+                                            <thead class="table-primary text-center">
+                                                <tr>
+                                                    <th>分類</th>
+                                                    <th>成分與型號</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>高銀含量</td>
+                                                    <td>Sn/3.0Ag/0.5Cu — MB-SAC305 (E9650)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>低銀含量</td>
+                                                    <td>Sn/0.3Ag/0.7Cu — MB-SAC0307</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>無銀含量</td>
+                                                    <td>
+                                                        Sn/Cu/Ni — MB-NAP100<br>
+                                                        Sn/0.7Cu — MB-D9930C<br>
+                                                        <small class="text-muted">※ 專利：中華民國專利字號 I366495</small>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="v-pills-solderwire" role="tabpanel">
+                            <h2 class="mb-4 text-primary fw-bold">錫絲</h2>
+                            <p class="fs-5">可用於自動銲接機與人工銲接，最細線徑可低至 0.2mm。</p>
+
+                            <!-- 無鹵錫絲 -->
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary mb-3">無鹵錫絲</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle">
+                                            <thead class="table-primary text-center">
+                                                <tr>
+                                                    <th>特性</th>
+                                                    <th>對應型號</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>極佳的濕潤性，且無白色助銲劑殘留物</td>
+                                                    <td>HF961</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>超低飛濺錫絲，銲後板面乾淨</td>
+                                                    <td>HF1072</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 免洗型錫絲 -->
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary mb-3">免洗型錫絲</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle">
+                                            <thead class="table-primary text-center">
+                                                <tr>
+                                                    <th>特性</th>
+                                                    <th>對應型號</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>高功效配方，增加焊接速度</td>
+                                                    <td>GamPlus1688</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>高效率的銲接性能</td>
+                                                    <td>2799</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>可與保險絲產業相容</td>
+                                                    <td>HDF-2730</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>可銲接至鎳上，不須打磨</td>
+                                                    <td>Ni200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>可銲接至鋁上，具良好濕潤性，不須打磨</td>
+                                                    <td>AI-201</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>可銲接至不鏽鋼上，銲接力強，不須打磨</td>
+                                                    <td>SS-302</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>可與低溫銲接相容（錫/鉍合金）</td>
+                                                    <td>LWT-137</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 補充說明 -->
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-body">
+                                    <h5 class="text-secondary fw-bold mb-3">產品特色</h5>
+                                    <ul class="text-start fs-6">
+                                        <li>高電性可靠性，通過表面絕緣電阻試驗、銅鏡試驗、銅板腐蝕測試。</li>
+                                        <li>銲接後助銲劑不會留下白色粉末。</li>
+                                        <li>不會斷線、無助焊劑斷料，並可相容自動銲錫機銲接。</li>
+                                        <li>岱暉的錫絲化學助銲劑可確保各種應用皆具良好銲接性。</li>
+                                        <li class="text-muted">※ 所有型號皆可提供超細 0.2mm 線徑。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- 左側 LOGO -->
+                <div class="footer-logo-wrap">
+                    <a href="index.html">
+                        <img src="IMG/logo.png" alt="DYFENCO Logo" class="footer-logo">
+                    </a>
+                </div>
+
+                <!-- 右側連結 -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="about.html">關於岱暉</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="products.html">產品資訊</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="contect.html">聯絡我們</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 岱暉股份有限公司 All rights reserved.</p>
+                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜E-mail：leadfree@dyfenco.com</p>
+            </div>
+        </div>
+    </footer>
+    <a href="products.html" class="back-to-products-btn">
+        ← 返回產品總覽
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
