@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dyfenco International Co., Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/about.css">
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: #1a237e;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background: #fff;
+                padding: 10px 0;
+            }
+
+            .navbar nav.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
+        <div class="container">
+            <!-- 左側 Logo 與名稱 -->
+            <a class="navbar-brand d-flex align-items-center" href="index-en.html">
+                <img src="IMG/岱暉英文logo.png" height="60" class="me-2" />
+            </a>
+
+            <!-- 導覽列開關（手機） -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 導覽列內容 -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+                <!-- 中間選單 -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="index-en.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="about-en.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="products-en.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="contect-en.html">Contact</a></li>
+                </ul>
+
+                <!-- 右側搜尋欄與語言切換 -->
+                <form class="d-flex align-items-center gap-2" role="search">
+                    <input class="form-control" type="search" placeholder="Serch...">
+                    <select onchange="location.href=this.value" class="form-select w-auto">
+                        <option value="about.html">繁體中文</option>
+                        <option value="about-en.html" selected>English</option>
+                        <option value="about-ja.html">日本語</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- About 主內容區 -->
+    <section class="about-section text-white text-center position-relative">
+        <div class="container position-relative z-1 py-5 animate-fade">
+            <h2 class="about-title fw-bold mb-4">About Dyfenco</h2>
+            <p class="about-description fw-medium lh-lg px-3">
+                Dyfenco Co., Ltd., founded in 1979, was established by a team of experts with extensive experience in
+                materials science and packaging processes. We specialize in the R&D and manufacturing of electronic
+                soldering materials, providing high-quality and reliable raw materials to the global electronics
+                industry.
+            </p>
+            <p class="about-description fw-medium lh-lg px-3">
+                Our product range includes solder paste, solder wire, solder bar, flux, tin anodes, preform solder, and
+                electronic packaging adhesives, widely applied in advanced manufacturing such as PCB assembly,
+                automotive electronics, LED, semiconductor packaging, PCs, and communication devices.
+            </p>
+            <p class="about-description fw-medium lh-lg px-3">
+                With operations in Taiwan, China, Vietnam, and India, we are continuously expanding our global footprint
+                and enhancing localized support. In 2012, we established the MORE Electronics Laboratory, which follows
+                IPC international standards to offer full-scale product testing, application validation, and process
+                simulation.
+            </p>
+            <p class="about-description fw-medium lh-lg px-3">
+                We firmly believe that consistent quality, continuous innovation, and deep technical expertise are the
+                keys to becoming a trusted long-term partner.
+            </p>
+            <img src="IMG/CompanyProfile_2.png" alt="公司介紹圖" class="about-img img-fluid mt-5 rounded shadow">
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- 左側 LOGO -->
+                <div class="footer-logo-wrap">
+                    <a href="index-en.html">
+                        <img src="IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
+                    </a>
+                </div>
+                <!-- 右側連結 -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="about-en.html">About Us</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="products-en.html">Products</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="contect-en.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dyfenco International Co., Ltd. All rights reserved.</p>
+                <p>No. 136, Silin Rd., Yanchao Dist., Kaohsiung City 824, Taiwan (R.O.C.)｜TEL：+886 7
+                    6160317｜E-mail：leadfree@dyfenco.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
