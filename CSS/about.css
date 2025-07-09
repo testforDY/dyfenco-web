@@ -84,10 +84,12 @@ header.navbar {
 /* ===== About 區塊（文字置中、背景圖）===== */
 .about-section {
     background: url("/DY_test/IMG/CompanyProfile_1.jpg") center center / cover no-repeat;
-    color: white;
     padding: 120px 20px;
     position: relative;
     min-height: 400px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 30px 20px;
 }
 
 .about-section::before {
@@ -120,7 +122,7 @@ header.navbar {
 }
 
 .about-img {
-    width: 100%;
+     width: 100%;
     max-width: 900px;
     height: auto;
     display: block;
