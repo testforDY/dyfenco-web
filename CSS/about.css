@@ -83,7 +83,7 @@ header.navbar {
 
 /* ===== About 區塊（文字置中、背景圖）===== */
 .about-section {
-    background: url("/DY_test/IMG/CompanyProfile_1.jpg") center center / cover no-repeat;
+    background: url("/dyfeco-web/IMG/CompanyProfile_1.jpg") center center / cover no-repeat;
     padding: 120px 20px;
     position: relative;
     min-height: 400px;
