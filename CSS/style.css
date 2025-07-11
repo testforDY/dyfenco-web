@@ -84,7 +84,7 @@ header.navbar {
 /* ===== Hero 區塊（大圖區） ===== */
 .hero-section {
     min-height: 100vh;
-    background-image: url("/DY_test/IMG/hero1.jpg");
+    background-image: url("/dyfenco-web/IMG/hero1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
