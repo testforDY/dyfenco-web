@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>岱暉股份有限公司</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/DY_test/CSS/ElectronicGradeChemicals.css">
+    <link rel="stylesheet" href="/dyfenco-web/CSS/style.css">
     <style>
         .hamburger {
             display: none;
@@ -41,29 +41,6 @@
             }
         }
     </style>
-    <style>
-        body {
-            background-color: #fff;
-        }
-
-        .products-preview {
-            background-color: #fff;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .footer {
-            background-color: #f8f8f8;
-            padding-top: 60px;
-        }
-
-        .footer-bottom {
-            color: #7C2E24;
-            text-align: center;
-            padding: 20px;
-            font-size: 15px;
-        }
-    </style>
 </head>
 
 <body>
@@ -72,7 +49,7 @@
         <div class="container">
             <!-- 左側 Logo 與名稱 -->
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="IMG/logo.png" height="60" class="me-2" />
+                <img src="/dyfenco-web/IMG/logo.png" height="60" class="me-2" />
             </a>
 
             <!-- 導覽列開關（手機） -->
@@ -84,25 +61,24 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
                 <!-- 中間選單 -->
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/DY_test/index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/DY_test/about.html">關於岱暉</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/DY_test/products.html">產品介紹</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/DY_test/contect.html">聯絡資訊</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/about.html">關於岱暉</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-webproducts.html">產品介紹</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contect.html">聯絡資訊</a></li>
                 </ul>
 
                 <!-- 右側搜尋欄與語言切換 -->
                 <form class="d-flex align-items-center gap-2" role="search">
                     <input class="form-control" type="search" placeholder="搜尋...">
-                    <select class="form-select w-auto">
-                        <option selected>繁體中文</option>
-                        <option value="en">English</option>
-                        <option value="ja">日本語</option>
+                    <select onchange="location.href=this.value" class="form-select w-auto">
+                        <option value="/dyfenco-web/index.html" selected>繁體中文</option>
+                        <option value="/dyfenco-web/index-en.html">English</option>
+                        <option value="/dyfenco-web/index-ja.html">日本語</option>
                     </select>
                 </form>
             </div>
         </div>
     </header>
-
     <section class="products-preview">
         <div class="container">
             <div class="row">
