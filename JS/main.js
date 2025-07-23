@@ -83,3 +83,38 @@ setInterval(() => {
   newsIndex = (newsIndex + 1) % newsItems.length;
   newsItems[newsIndex].classList.add('active');
 }, 3000);
+
+const langBtn = document.querySelector('.language-btn');
+const langMenu = document.querySelector('.language-menu');
+
+langBtn.addEventListener('click', () => {
+  langMenu.classList.toggle('active');
+});
+
+const currentPath = window.location.pathname.split("/").pop();
+const container = document.getElementById("about-tabs");
+
+// 判斷是否為英文頁面（可依據路徑含 en、-en、或資料夾）
+const isEnglish = currentPath.includes("-en");
+
+// 中英文 tab 對照
+const tabs = isEnglish
+  ? [
+    { path: "about-en.html", label: "Company Profile" },
+    { path: "about-goal-en.html", label: "Our Mission" },
+    { path: "about-lab-en.html", label: "MORE LAB" }
+  ]
+  : [
+    { path: "about.html", label: "公司簡介" },
+    { path: "about-goal.html", label: "我們的目標" },
+    { path: "about-lab.html", label: "實驗室介紹" }
+  ];
+
+container.innerHTML = tabs
+  .map((tab, index) => {
+    const isActive = tab.path === currentPath;
+    const html = `<a href="${tab.path}" class="tab-link${isActive ? ' active' : ''}">${tab.label}</a>`;
+    const separator = index < tabs.length - 1 ? '<span class="tab-separator"> / </span>' : '';
+    return html + separator;
+  })
+  .join('');
