@@ -1,12 +1,27 @@
-@media (max-width: 768px) {
-    .products-preview h2 {
-        font-size: 1.5rem;
-        display: block;
-        max-width: 100%;
-        white-space: normal;
-        word-break: break-word;
-        line-height: 1.4;
+@media (max-width: 576px) {
+    .product-content {
         padding: 0 1rem;
+    }
+
+    .product-item {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .product-item img,
+    .product-img {
+        height: 140px;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+        display: block;
+    }
+
+    .product-name-outside {
+        font-size: 1.2rem;
+        margin-top: 1rem;
     }
 }
 
@@ -26,8 +41,9 @@ body {
 
 /* ===== 導覽列與 LOGO 分離樣式 ===== */
 .navbar-brand img {
-    height: 70px;
-    width: auto;
+    max-height: 60px;
+    max-width: 250px;
+    object-fit: contain;
 }
 
 header.navbar {
@@ -87,6 +103,55 @@ header.navbar {
     text-align: center;
 }
 
+.language-dropdown .language-btn {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.language-dropdown .language-btn:hover {
+    transform: scale(1.15);
+}
+
+.language-dropdown .language-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.language-dropdown .language-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.language-dropdown .language-menu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.language-dropdown .language-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.language-dropdown .language-menu li:hover {
+    background-color: #f0f0f0;
+}
+
 /* ===== 產品介紹區塊 ===== */
 .products-preview {
     background-color: #fff;
@@ -94,9 +159,17 @@ header.navbar {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .products-preview {
-        padding: 60px 10px;
+@media (max-width: 576px) {
+    .product-item {
+        padding: 1.5rem;
+    }
+
+    .product-item img {
+        height: 120px;
+    }
+
+    .product-title {
+        font-size: 1.5rem;
     }
 }
 
@@ -109,65 +182,107 @@ header.navbar {
 }
 
 .product-title {
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: #7C2E24;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
     font-weight: bold;
-    margin-bottom: 2rem;
+    color: #7C2E24;
+    margin-bottom: 2.5rem;
 }
 
 .product-item {
-    background-color: #f5f5f5;
-    box-shadow: 0 4px 12px rgba(124, 46, 36, 0.6);
+    background-color: #ffffff;
     border-radius: 1.5rem;
-    padding: 2.5rem;
-    transition: transform 0.3s;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 20px rgba(124, 46, 36, 0.2);
+    transition: all 0.3s ease-in-out;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
 }
 
-.products-preview h2 {
-    color: #7C2E24;
-    text-align: center !important;
-    margin: 0 auto;
-}
-
-.product-item:hover {
-    transform: translateY(-4px);
+.product-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease;
 }
 
 .product-item img {
-    max-height: 200px;
-    width: 100%;
+    height: 180px;
+    width: auto;
     object-fit: contain;
+    margin-bottom: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+.product-name-outside {
+    font-size: 1.3rem;
+    font-weight: bold;
     margin-bottom: 1rem;
-}
-
-.product-item h3 {
-    font-size: 1.2rem;
-    /* 調整文字大小 */
-    font-weight: 600;
-    /* 字體粗細 */
-    margin-top: 1rem;
-    /* 與圖片距離 */
-    margin-bottom: 0;
-    /* 底部空間 */
+    margin-top: 30px;
     color: #7C2E24;
-    /* 主色文字 */
 }
 
-.product-item a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
+.product-item.no-title {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
 
-.product-item a:hover {
-    color: #0d47a1;
-    /* 滑過變色，可換你想要的 */
+.product-link:hover .product-item {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(124, 46, 36, 0.25);
 }
 
+.product-img {
+    height: 160px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.product-link:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* overlay 效果 */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    border-radius: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .overlay {
+    opacity: 1;
+}
 
 /* ===== 頁腳區塊 ===== */
 .footer {
@@ -188,7 +303,7 @@ header.navbar {
 
 .footer-logo {
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     height: auto;
 }
 
