@@ -48,7 +48,7 @@
     <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
         <div class="container">
             <!-- 左側 Logo 與名稱 -->
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <a class="navbar-brand d-flex align-items-center" href="/dyfenco-web/index.html">
                 <img src="/dyfenco-web/IMG/logo.png" height="60" class="me-2" />
             </a>
 
@@ -61,20 +61,36 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
                 <!-- 中間選單 -->
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/about.html">關於岱暉</a></li>
+                    li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index.html">首頁</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            關於岱暉
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/dyfenco-web/about.html">公司簡介</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-goal.html">我們的目標</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-lab.html">實驗室介紹</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products.html">產品介紹</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contect.html">聯絡資訊</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contact.html">聯絡資訊</a></li>
                 </ul>
 
                 <!-- 右側搜尋欄與語言切換 -->
-                <form class="d-flex align-items-center gap-2" role="search">
+                <form class="d-flex align-items-center gap-3" role="search">
                     <input class="form-control" type="search" placeholder="搜尋...">
-                    <select onchange="location.href=this.value" class="form-select w-auto">
-                        <option value="/dyfenco-web/index.html" selected>繁體中文</option>
-                        <option value="/dyfenco-web/index-en.html">English</option>
-                        <option value="/dyfenco-web/index-ja.html">日本語</option>
-                    </select>
+
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="/dyfenco-web/index.html" selected>繁體中文</a></li>
+                            <li><a href="/dyfenco-web/index-en.html">English</a></li>
+                            <li><a href="/dyfenco-web/index-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
                 </form>
             </div>
         </div>
@@ -89,117 +105,159 @@
         </div>
     </section>
 
-    <section id="main-banner" class="py-5 my-banner">
-        <div class="container-fluid animate-fade">
-            <div class="banner-wrapper mx-auto">
-                <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <!-- 原本的圓點指示器 -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="圖1"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"
-                            aria-label="圖2"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"
-                            aria-label="圖3"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3"
-                            aria-label="圖4"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4"
-                            aria-label="圖5"></button>
-                    </div>
-
-                    <!-- 原本的圖片輪播 -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/dyfenco-web/IMG/Banner_1.png" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/banner_7_C.jpg" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 4">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/Banner_2.png" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/banner_8_C.jpg" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 5">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/Banner_3.png" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 3">
-                        </div>
-                    </div>
-
-                    <!-- 原本的左右按鈕 -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">上一張</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">下一張</span>
-                    </button>
-                </div>
-            </div>
-    </section>
-
-    <section class="news-bar">
-        <div class="container-fluid d-flex justify-content-start align-items-center px-4 ">
-            <div class="news-label">最新消息</div>
-            <div class="news-content-wrapper flex-grow-1">
-                <div id="news-rotator" class="news-rotator">
-                    <div class="news-item active">2025 國際半導體展覽</div>
-                    <div class="news-item">2025 台北國際電子展</div>
-                    <div class="news-item">岱暉參展 AutoTronics 車電展</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- 熱門產品預覽區塊 -->
-    <section class="products-preview" id="products">
+    <!-- 最新消息 -->
+    <section class="news-section py-5">
         <div class="container">
-            <h2 class="animate-fade">熱門產品分類</h2>
-            <div class="row justify-content-center g-4">
-                <a href="#v-pills-solderpaste" class="text-decoration-none"></a>
-                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center animate-fade">
-                    <div class="product-item text-center">
-                        <img src="/dyfenco-web/IMG/solder-paste.webp" alt="錫膏">
-                        <h3>錫膏</h3>
-                    </div>
+            <h2 class="news-title text-center mb-4 fw-bold animate-fade">最新消息</h2>
+            <div class="row g-4 justify-content-center animate-fade">
+                <div class="col-md-4">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="news-card p-4 h-100 shadow-sm bg-white rounded hover-effect">
+                            <img src="/dyfenco-web/IMG/EMailBanner.jpg" alt="news1" class="img-fluid rounded mb-3 animate-fade">
+                            <h5 class="news-title text-primary animate-fade">SEMICON Taiwan 2025</h5>
+                            <p class="text-muted small animate-fade">2025/09/10</p>
+                            <p class="news-summary animate-fade">岱暉將參加 SEMICON Taiwan，展出最新焊接材料技術與解決方案。</p>
+                            <a href="https://www.semicontaiwan.org/zh"
+                                class="btn bannerbtn-primary mt-auto align-self-start">查看更多</a>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center animate-fade">
-                    <div class="product-item text-center">
-                        <img src="/dyfenco-web/IMG/solder-bar.webp" alt="錫條">
-                        <h3>錫條</h3>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center animate-fade">
-                    <div class="product-item text-center">
-                        <img src="/dyfenco-web/IMG/liquid-flux.webp" alt="助焊劑">
-                        <h3>助焊劑</h3>
-                    </div>
+                <div class="col-md-4">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="news-card p-4 h-100 shadow-sm bg-white rounded hover-effect">
+                            <img src="/dyfenco-web/IMG/6.jpg" alt="news3" class="img-fluid rounded mb-3 animate-fade">
+                            <h5 class="news-title text-primary animate-fade">AutoTronics Taipei 2023</h5>
+                            <p class="text-muted small animate-fade">2023/04/12</p>
+                            <p class="news-summary animate-fade">岱暉於車用電子展中發表車規級銲錫技術，受到廣泛關注。</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Banner -->
+    <section id="main-banner" class="my-banner">
+        <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- 輪播內容 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/dyfenco-web/IMG/Banner_1.png" class="banner-img" alt="Banner 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/banner_7_C.jpg" class="banner-img" alt="Banner 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/Banner_2.png" class="banner-img" alt="Banner 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/banner_8_C.jpg" class="banner-img" alt="Banner 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/Banner_3.png" class="banner-img" alt="Banner 5">
+                </div>
+            </div>
+
+            <!-- 左右箭頭 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">上一張</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">下一張</span>
+            </button>
+        </div>
+    </section>
+
+     <!-- 品牌優勢 -->
+    <section class="features py-5 text-center bg-light">
+        <div class="container">
+            <h2 class="mb-4 fw-bold fs-2 animate-fade">選擇岱暉的理由</h2>
+            <div class="row g-4">
+                <div class="col-md-4 animate-fade">
+                    <h4>專注焊接材料超過 40 年</h4>
+                    <p>自 1979 年成立以來，岱暉致力於電子焊接材料的開發與製造，擁有深厚技術經驗。</p>
+                </div>
+                <div class="col-md-4 animate-fade">
+                    <h4>通過國際品質驗證</h4>
+                    <p>產品通過多項品質認證，並持續提供穩定且可靠的製程材料。</p>
+                </div>
+                <div class="col-md-4 animate-fade">
+                    <h4>全球客戶信賴</h4>
+                    <p>產品廣泛應用於車用電子、通訊設備、LED 與半導體等高端產業。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 熱門產品區塊（HTML 結構） -->
+    <section class="hot-products py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 animate-fade">熱門產品</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- 錫絲 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/solder-wire.webp" alt="錫絲" class="product-img">
+                        <h5 class="product-title">錫絲</h5>
+                        <p class="product-desc">
+                            內含助焊劑的線狀錫料，適用於手焊與自動化設備。
+                        </p>
+                        <a href="Welding Materials.html#wire" class="btn btn-outline-primary">查看更多</a>
+                    </div>
+                </div>
+
+                <!-- 錫膏 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/solder-paste.webp" alt="錫膏" class="product-img">
+                        <h5 class="product-title">錫膏</h5>
+                        <p class="product-desc">
+                            SMT 製程用錫膏，具備優異印刷性與焊接可靠性。
+                        </p>
+                        <a href="Welding Materials.html#paste" class="btn btn-outline-primary">查看更多</a>
+                    </div>
+                </div>
+
+                <!-- 錫條 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/solder-bar.webp" alt="錫條" class="product-img">
+                        <h5 class="product-title">錫條</h5>
+                        <p class="product-desc">
+                            波峰焊專用錫條，穩定熔點與低渣性。
+                        </p>
+                        <a href="Welding Materials.html#bar" class="btn btn-outline-primary">查看更多</a>
+                    </div>
+                </div>
+
+                <!-- 助焊劑 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/liquid-flux.webp" alt="助焊劑" class="product-img">
+                        <h5 class="product-title">助焊劑</h5>
+                        <p class="product-desc">
+                            液體與膏狀助焊劑，提供良好潤濕與去氧化能力。
+                        </p>
+                        <a href="ElectronicGradeChemicals.html#flux" class="btn btn-outline-primary">查看更多</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
     <!-- 頁腳 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-                <!-- 左側 LOGO -->
                 <div class="footer-logo-wrap">
-                    <a href="/dyfenco-web/index.html">
-                        <img src="/dyfenco-web/IMG/logo.png" alt="DYFENCO Logo" class="footer-logo">
+                    <a href="index.html">
+                        <img src="/dyfenco-web/IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
                     </a>
                 </div>
-
-                <!-- 右側連結 -->
                 <div class="footer-links">
                     <div class="footer-column">
                         <a href="/dyfenco-web/about.html">關於岱暉</a>
@@ -212,10 +270,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2025 岱暉股份有限公司 All rights reserved.</p>
-                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜E-mail：leadfree@dyfenco.com</p>
+                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜FAX : 07-6161639｜E-mail：leadfree@dyfenco.com</p>
             </div>
         </div>
     </footer>
