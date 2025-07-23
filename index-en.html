@@ -62,19 +62,34 @@
                 <!-- 中間選單 -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index-en.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/about-en.html">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products-en.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contect-en.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-en.html">Company Profile</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-goal-en.html">Our Mission</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-lab-en.html">MORE LAB</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products-en.html">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contact-form.html">CONTACT</a></li>
                 </ul>
 
                 <!-- 右側搜尋欄與語言切換 -->
-                <form class="d-flex align-items-center gap-2" role="search">
-                    <input class="form-control" type="search" placeholder="Serch...">
-                    <select onchange="location.href=this.value" class="form-select w-auto">
-                        <option value="/dyfenco-web/index.html">繁體中文</option>
-                        <option value="/dyfenco-web/index-en.html" selected>English</option>
-                        <option value="/dyfenco-web/index-ja.html">日本語</option>
-                    </select>
+                <form class="d-flex align-items-center gap-3" role="search">
+                    <input class="form-control" type="search" placeholder="Search...">
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="/dyfenco-web/index.html">繁體中文</a></li>
+                            <li><a href="/dyfenco-web/index-en.html" selected>English</a></li>
+                            <li><a href="/dyfenco-web/index-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
                 </form>
             </div>
         </div>
@@ -90,99 +105,150 @@
         </div>
     </section>
 
-    <section id="main-banner" class="py-5 my-banner">
-        <div class="container-fluid animate-fade">
-            <div class="banner-wrapper mx-auto">
-                <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <!-- 原本的圓點指示器 -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="圖1"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"
-                            aria-label="圖2"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"
-                            aria-label="圖3"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3"
-                            aria-label="圖4"></button>
-                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="4"
-                            aria-label="圖5"></button>
-                    </div>
-
-                    <!-- 原本的圖片輪播 -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/dyfenco-web/IMG/banner_4.jpg" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 1">
+    <!-- 最新消息 -->
+    <section class="news-section py-5">
+        <div class="container">
+            <h2 class="news-title text-center mb-4 fw-bold animate-fade">NEWS</h2>
+            <div class="row g-4 justify-content-center animate-fade">
+                <div class="col-md-4">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="news-card p-4 h-100 shadow-sm bg-white rounded hover-effect">
+                            <img src="/dyfenco-web/IMG/EMailBanner.jpg" alt="news1" class="img-fluid rounded mb-3 animate-fade">
+                            <h5 class="news-title text-primary animate-fade">SEMICON Taiwan 2025</h5>
+                            <p class="text-muted small animate-fade">2025/09/10</p>
+                            <p class="news-summary animate-fade">Dyfenco will participate in SEMICON Taiwan, showcasing
+                                its latest soldering material technologies and solutions.
+                            </p>
+                            <a href="https://www.semicontaiwan.org/zh"
+                                class="btn bannerbtn-primary mt-auto align-self-start">MORE</a>
                         </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/banner_7_1.jpg" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 4">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/banner_1.jpg" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/banner_8_E.jpg" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 5">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/dyfenco-web/IMG/banner_3.jpg" class="d-block w-100"
-                                style="max-height: 500px; object-fit: contain; background-color: #fff;" alt="Banner 3">
-                        </div>
-                    </div>
-
-                    <!-- 原本的左右按鈕 -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">上一張</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">下一張</span>
-                    </button>
+                    </a>
                 </div>
-            </div>
-    </section>
-
-    <section class="news-bar">
-        <div class="container-fluid d-flex justify-content-start align-items-center px-4 ">
-            <div class="news-label">NEWS</div>
-            <div class="news-content-wrapper flex-grow-1">
-                <div id="news-rotator" class="news-rotator">
-                    <div class="news-item active">SEMICON Taiwan 2025</div>
-                    <div class="news-item">2025 TAITRONICS</div>
-                    <div class="news-item">AutoTronics Taipei 2023</div>
+                <div class="col-md-4">
+                    <a href="#" class="text-decoration-none text-dark">
+                        <div class="news-card p-4 h-100 shadow-sm bg-white rounded hover-effect">
+                            <img src="/dyfenco-web/IMG/5.jpg" alt="news3" class="img-fluid rounded mb-3 animate-fade">
+                            <h5 class="news-title text-primary animate-fade">AutoTronics Taipei 2023</h5>
+                            <p class="text-muted small animate-fade">2023/04/12</p>
+                            <p class="news-summary animate-fade">Dyfenco unveiled its automotive-grade soldering
+                                technology at the Automotive Electronics Show, attracting widespread attention.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Banner -->
+    <section id="main-banner" class="my-banner">
+        <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- 輪播內容 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src=/dyfenco-web/"IMG/banner_4.jpg" class="banner-img" alt="Banner 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/banner_7_1.jpg" class="banner-img" alt="Banner 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/banner_1.jpg" class="banner-img" alt="Banner 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/banner_8_E.jpg" class="banner-img" alt="Banner 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="/dyfenco-web/IMG/banner_3.jpg" class="banner-img" alt="Banner 5">
+                </div>
+            </div>
+
+            <!-- 左右箭頭 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">上一張</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">下一張</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 品牌優勢 -->
+    <section class="features py-5 text-center bg-light">
+        <div class="container">
+            <h2 class="mb-4 fw-bold animate-fade">WHY CHOOSE US?</h2>
+            <div class="row g-4">
+                <div class="col-md-4 animate-fade">
+                    <h4>Over 40 Years of Soldering Expertise</h4>
+                    <p>Since its establishment in 1979, Dyfenco has been dedicated to the development and manufacturing
+                        of electronic soldering materials, backed by deep technical expertise.</p>
+                </div>
+                <div class="col-md-4 animate-fade">
+                    <h4>Certified Quality Assurance</h4>
+                    <p>Our products are certified by international quality standards, consistently delivering stable and
+                        reliable process materials.</p>
+                </div>
+                <div class="col-md-4 animate-fade">
+                    <h4>Trusted by Global Clients</h4>
+                    <p>Widely used in high-end industries such as automotive electronics, telecommunications, LED, and
+                        semiconductor applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- 熱門產品預覽區塊 -->
-    <section class="products-preview" id="products">
+    <section class="hot-products py-5">
         <div class="container">
-            <h2 class="animate-fade">Popular Product Categories</h2>
+            <h2 class="section-title text-center mb-5 animate-fade">Popular Product Categories</h2>
             <div class="row justify-content-center g-4">
-                <a href="#v-pills-solderpaste" class="text-decoration-none"></a>
-                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center animate-fade">
-                    <div class="product-item text-center">
-                        <img src="/dyfenco-web/IMG/solder-paste.webp" alt="Solder-Paste">
-                        <h3>Solder-Paste</h3>
+                <!-- Solder Wire -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/solder-wire.webp" alt="Solder Wire" class="product-img">
+                        <h5 class="product-title">Solder Wire</h5>
+                        <p class="product-desc">
+                            Flux-cored solder wire suitable for hand soldering and automated equipment.
+                        </p>
+                        <a href="/dyfenco-web/Welding Materials.html#wire" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center animate-fade">
-                    <div class="product-item text-center">
-                        <img src="/dyfenco-web/IMG/solder-bar.webp" alt="Solder-Bar">
-                        <h3>Solder-Bar</h3>
+
+                <!-- Solder Paste -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/solder-paste.webp" alt="Solder Paste" class="product-img">
+                        <h5 class="product-title">Solder Paste</h5>
+                        <p class="product-desc">
+                            High-performance solder paste for SMT processes, offering excellent printability and
+                            soldering reliability.
+                        </p>
+                        <a href="/dyfenco-web/Welding Materials-en.html" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center animate-fade">
-                    <div class="product-item text-center">
-                        <img src="/dyfenco-web/IMG/liquid-flux.webp" alt="Flux">
-                        <h3>Flux</h3>
+
+                <!-- Solder Bar -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/solder-bar.webp" alt="Solder Bar" class="product-img">
+                        <h5 class="product-title">Solder Bar</h5>
+                        <p class="product-desc">
+                            Solder bars for wave soldering with stable melting point and low dross.
+                        </p>
+                        <a href="/dyfenco-web/Welding Materials-en.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Flux -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="/dyfenco-web/IMG/liquid-flux.webp" alt="Flux" class="product-img">
+                        <h5 class="product-title">Flux</h5>
+                        <p class="product-desc">
+                            Liquid and paste fluxes offering excellent wetting and deoxidizing performance.
+                        </p>
+                        <a href="/dyfenco-web/ElectronicGradeChemicals-en.html" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -215,7 +281,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Dyfenco International Co., Ltd. All rights reserved.</p>
                 <p>No. 136, Silin Rd., Yanchao Dist., Kaohsiung City 824, Taiwan (R.O.C.)｜TEL：+886 7
-                    6160317｜E-mail：leadfree@dyfenco.com</p>
+                    6160317｜FAX：+886 7 6161639｜E-mail：leadfree@dyfenco.com</p>
             </div>
         </div>
     </footer>
