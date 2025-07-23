@@ -1,8 +1,42 @@
-@media (max-width: 991px) {
-    .navbar .container {
-        padding: 0 20px;
+@media (max-width: 575.98px) {
+    .contact-form-section {
+        padding: 40px 15px;
+    }
+
+    .contact-form-section form {
+        padding: 2rem 1rem;
+        border-radius: 8px;
+    }
+
+    .contact-form-section .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    .contact-form-section .form-label {
+        font-size: 1rem;
+    }
+
+    .contact-form-section .form-control {
+        font-size: 0.95rem;
+        padding: 12px;
+        border-radius: 0.5rem;
+    }
+
+    .contact-form-section .btn-primary {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+        border-radius: 0.75rem;
+    }
+
+    .contact-form-section .btn-return {
+        width: 100%;
+        margin-top: 30px;
+        font-size: 1rem;
+        border-radius: 0.75rem;
     }
 }
+
 
 /* ===== 基本設定 ===== */
 body {
@@ -20,8 +54,9 @@ body {
 
 /* ===== 導覽列與 LOGO 分離樣式 ===== */
 .navbar-brand img {
-    height: 70px;
-    width: auto;
+    max-height: 60px;
+    max-width: 250px;
+    object-fit: contain;
 }
 
 header.navbar {
@@ -81,11 +116,60 @@ header.navbar {
     text-align: center;
 }
 
+.language-dropdown .language-btn {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.language-dropdown .language-btn:hover {
+    transform: scale(1.15);
+}
+
+.language-dropdown .language-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.language-dropdown .language-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.language-dropdown .language-menu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.language-dropdown .language-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.language-dropdown .language-menu li:hover {
+    background-color: #f0f0f0;
+}
+
 /* contact-form.css */
 :root {
     --primary: #7C2E24;
     --hover: #A94438;
-    --background: #f4f4f4;
+    --background: #fff;
     --white: #ffffff;
     --form-radius: 1.2rem;
 }
@@ -93,6 +177,7 @@ header.navbar {
 .contact-form-section {
     background-color: var(--background);
     padding: 80px 20px;
+
 }
 
 .contact-form-section h2 {
@@ -110,6 +195,8 @@ header.navbar {
     padding: 3.5rem 3rem;
     border-radius: var(--form-radius);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #7C2E24;
+    border-radius: 12px;
 }
 
 .contact-form-section .form-group {
@@ -196,7 +283,7 @@ header.navbar {
 
 .footer-logo {
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     height: auto;
 }
 
