@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>岱暉股份有限公司</title>
+    <title>關於 | 岱暉股份有限公司</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/dyfenco-web/CSS/about.css">
     <style>
@@ -48,8 +48,8 @@
     <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
         <div class="container">
             <!-- 左側 Logo 與名稱 -->
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="/dyfenco-web/IMG/logo.png" height="60" class="me-2" />
+            <a class="navbar-brand d-flex align-items-center" href="/dyfenco-web/index.html">
+                <img src="/dyfenco-web/IMG/岱暉英文logo.png" height="60" class="me-2" />
             </a>
 
             <!-- 導覽列開關（手機） -->
@@ -62,42 +62,92 @@
                 <!-- 中間選單 -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/about.html">關於岱暉</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            關於岱暉
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/dyfenco-web/about.html">公司簡介</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-goal.html">我們的目標</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-lab.html">實驗室介紹</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products.html">產品介紹</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contect.html">聯絡資訊</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contact.html">聯絡資訊</a></li>
                 </ul>
 
                 <!-- 右側搜尋欄與語言切換 -->
-                <form class="d-flex align-items-center gap-2" role="search">
+                <form class="d-flex align-items-center gap-3" role="search">
                     <input class="form-control" type="search" placeholder="搜尋...">
-                    <select onchange="location.href=this.value" class="form-select w-auto">
-                        <option value="/dyfenco-web/index.html" selected>繁體中文</option>
-                        <option value="/dyfenco-web/index-en.html">English</option>
-                        <option value="/dyfenco-web/index-ja.html">日本語</option>
-                    </select>
+
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="/dyfenco-web/about.html" selected>繁體中文</a></li>
+                            <li><a href="/dyfenco-web/about-en.html">English</a></li>
+                            <li><a href="/dyfenco-web/about-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
                 </form>
             </div>
         </div>
     </header>
-    
+
     <!-- About 主內容區 -->
-    <section class="about-section text-white text-center position-relative">
-        <div class="container position-relative z-1 py-5 animate-fade">
-            <h2 class="about-title fw-bold mb-4">關於岱暉</h2>
-            <p class="about-description fw-medium lh-lg px-3">
-                岱暉股份有限公司創立於 1979 年，由一群擁有豐富材料科學與封裝製程經驗的專家所創建，專注於電子焊接材料的研發與製造，持續為全球電子產業提供高品質、穩定可靠的原料來源。
+    <section class="about-section position-relative">
+        <div id="about-tabs" class="section-tabs position-absolute top-0 end-0 pe-4 pt-3">
+            <span
+                class="tab-item ${window.location.pathname.includes('about.html') && !window.location.pathname.includes('goal') && !window.location.pathname.includes('lab') ? 'active' : ''}">公司簡介</span>
+            <span class="tab-separator">/</span>
+            <span class="tab-item ${window.location.pathname.includes('goal') ? 'active' : ''}">我們的目標</span>
+            <span class="tab-separator">/</span>
+            <span class="tab-item ${window.location.pathname.includes('lab') ? 'active' : ''}">實驗室介紹</span>
+        </div>
+        <div
+            class="container container-flex d-flex flex-wrap align-items-center justify-content-center gap-4 py-5 animate-fade">
+            <div class="about-img-wrapper">
+                <img src="/dyfenco-web/IMG/CompanyProfile_1.jpg" alt="公司介紹圖" class="about-img">
+            </div>
+
+            <div class="about-text-wrapper">
+                <h2 class="about-title">介紹岱暉</h2>
+                <p class="about-description">
+                    岱暉股份有限公司創立於 1979 年，由一群擁有豐富材料科學與封裝製程經驗的專家所創建，專注於電子焊接材料的研發與製造，持續為全球電子產業提供高品質、穩定可靠的原料來源。
+                </p>
+                <p class="about-description">
+                    我們的產品涵蓋錫膏、錫絲、錫條、助焊劑、錫陽極、預成型錫及電子構裝黏著劑等，廣泛應用於 PCB 構裝、車用電子、LED、半導體封裝、個人電腦與通訊產品等先進製程領域。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="global-map-section text-center py-3 animate-fade">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="global-title mb-4">全球營運據點</h2>
+                    <p class="global-description">
+                        目前營運據點遍及台灣、中國、越南與印度，持續擴展全球布局，深耕在地服務。
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <img src="/dyfenco-web/IMG/CompanyProfile_2.png" alt="全球據點地圖" class="img-fluid d-block mx-auto my-3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-summary text-center text-white py-5">
+        <div class="container">
+            <p class="summary-text">
+                我們深信，唯有穩定的品質、持續的創新與技術深耕，<br class="d-none d-md-block">
+                才能成為客戶長期信賴的夥伴。
             </p>
-            <p class="about-description fw-medium lh-lg px-3">
-                我們的產品涵蓋錫膏、錫絲、錫條、助焊劑、錫陽極、預成型錫及電子構裝黏著劑等，廣泛應用於 PCB 構裝、車用電子、LED、半導體封裝、個人電腦與通訊產品等先進製程領域。
-            </p>
-            <p class="about-description fw-medium lh-lg px-3">
-                目前營運據點遍及台灣、中國、越南與印度，持續擴展全球布局，深耕在地服務。
-                2012 年，我們創立了 MORE 電子實驗室，依據國際 IPC 標準設計實驗流程，提供完整的產品檢測、應用驗證與製程模擬，協助客戶提升良率與製造效率。
-            </p>
-            <p class="about-description fw-medium lh-lg px-3">
-                我們深信，唯有穩定的品質、持續的創新與技術深耕，才能成為客戶長期信賴的夥伴。
-            </p>     
-                <img src="/dyfenco-web/IMG/ABOUT_1.png" alt="公司介紹圖" class="about-img img-fluid mt-5 rounded shadow">
         </div>
     </section>
 
@@ -108,7 +158,7 @@
                 <!-- 左側 LOGO -->
                 <div class="footer-logo-wrap">
                     <a href="/dyfenco-web/index.html">
-                        <img src="/dyfenco-web/IMG/logo.png" alt="DYFENCO Logo" class="footer-logo">
+                        <img src="/dyfenco-web/IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
                     </a>
                 </div>
 
@@ -128,7 +178,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 岱暉股份有限公司 All rights reserved.</p>
-                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜E-mail：leadfree@dyfenco.com</p>
+                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜FAX : 07-6161639｜E-mail：leadfree@dyfenco.com</p>
             </div>
         </div>
     </footer>
