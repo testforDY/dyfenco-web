@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>關於 | 岱暉股份有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/about.css">
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: #1a237e;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background: #fff;
+                padding: 10px 0;
+            }
+
+            .navbar nav.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
+        <div class="container">
+            <!-- 左側 Logo 與名稱 -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="IMG/岱暉英文logo.png" height="60" class="me-2" />
+            </a>
+
+            <!-- 導覽列開關（手機） -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 導覽列內容 -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+                <!-- 中間選單 -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="index.html">首頁</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            關於岱暉
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html">公司簡介</a></li>
+                            <li><a class="dropdown-item" href="about-goal.html">我們的目標</a></li>
+                            <li><a class="dropdown-item" href="about-lab.html">實驗室介紹</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="products.html">產品介紹</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="contact.html">聯絡資訊</a></li>
+                </ul>
+
+                <!-- 右側搜尋欄與語言切換 -->
+                <form class="d-flex align-items-center gap-3" role="search">
+                    <input class="form-control" type="search" placeholder="搜尋...">
+
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="about-lab.html" selected>繁體中文</a></li>
+                            <li><a href="about-lab-en.html">English</a></li>
+                            <li><a href="about-lab-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="lab-section position-relative">
+        <div id="about-tabs" class="section-tabs position-absolute top-0 end-0 pe-4 pt-3">
+            <span
+                class="tab-item ${window.location.pathname.includes('about.html') && !window.location.pathname.includes('goal') && !window.location.pathname.includes('lab') ? 'active' : ''}">公司簡介</span>
+            <span class="tab-separator">/</span>
+            <span class="tab-item ${window.location.pathname.includes('goal') ? 'active' : ''}">我們的目標</span>
+            <span class="tab-separator">/</span>
+            <span class="tab-item ${window.location.pathname.includes('lab') ? 'active' : ''}">實驗室介紹</span>
+        </div>
+
+        <img src="IMG/About_MORE_Lab_1.png" alt="MORE-LAB" class="img-fluid d-block mx-auto my-5 animate-fade">
+
+        <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3 py-5 lab-flex">
+            <div class="lab-text-wrapper animate-fade">
+                <strong class="lab-description">岱暉MORE電子實驗室（Do More, See More, Check More）在2012年成立。<br>
+                    MORE實驗室已經建立了完整的 IPC 規範中的實驗系統，<br>
+                    可提供客戶在技術支援上、PCB構裝可靠度與失效分析上，更強大的服務。</strong>
+            </div>
+            <div class="lab-img-wrapper animate-fade">
+                <img src="IMG/About_MORE_Lab_2.jpg" alt="公司介紹圖" class="img-fluid rounded shadow">
+            </div>
+            <a href="lab.html" class="btn btn-primary btn-lg animate-fade">了解更多</a>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- 左側 LOGO -->
+                <div class="footer-logo-wrap">
+                    <a href="index.html">
+                        <img src="IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
+                    </a>
+                </div>
+
+                <!-- 右側連結 -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="about.html">關於岱暉</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="products.html">產品資訊</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="contect.html">聯絡我們</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 岱暉股份有限公司 All rights reserved.</p>
+                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜FAX : 07-6161639｜E-mail：leadfree@dyfenco.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
