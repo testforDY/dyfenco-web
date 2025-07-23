@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>岱暉股份有限公司</title>
+    <title>產品介紹 | 岱暉股份有限公司</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/dyfenco-web/CSS/products.css">
+    <link rel="stylesheet" href="/dyfenco/CSS/products.css">
     <style>
         .hamburger {
             display: none;
@@ -41,6 +41,29 @@
             }
         }
     </style>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .products-preview {
+            background-color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding-top: 60px;
+        }
+
+        .footer-bottom {
+            color: #7C2E24;
+            text-align: center;
+            padding: 20px;
+            font-size: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -48,8 +71,8 @@
     <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
         <div class="container">
             <!-- 左側 Logo 與名稱 -->
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="/dyfenco-web/IMG/logo.png" height="60" class="me-2" />
+            <a class="navbar-brand d-flex align-items-center" href="/dyfenco/index.html">
+                <img src="/dyfenco/IMG/岱暉英文logo.png" height="60" class="me-2" />
             </a>
 
             <!-- 導覽列開關（手機） -->
@@ -61,20 +84,36 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
                 <!-- 中間選單 -->
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/about.html">關於岱暉</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products.html">產品介紹</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contect.html">聯絡資訊</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco/index.html">首頁</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            關於岱暉
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/dyfenco/about.html">公司簡介</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco/about-goal.html">我們的目標</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco/about-lab.html">實驗室介紹</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco/products.html">產品介紹</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco/contact.html">聯絡資訊</a></li>
                 </ul>
 
                 <!-- 右側搜尋欄與語言切換 -->
-                <form class="d-flex align-items-center gap-2" role="search">
+                <form class="d-flex align-items-center gap-3" role="search">
                     <input class="form-control" type="search" placeholder="搜尋...">
-                    <select onchange="location.href=this.value" class="form-select w-auto">
-                        <option value="/dyfenco-web/index.html" selected>繁體中文</option>
-                        <option value="/dyfenco-web/index-en.html">English</option>
-                        <option value="/dyfenco-web/index-ja.html">日本語</option>
-                    </select>
+
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="/dyfenco/IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="/dyfenco/products.html" selected>繁體中文</a></li>
+                            <li><a href="/dyfenco/products-en.html">English</a></li>
+                            <li><a href="/dyfenco/products-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
                 </form>
             </div>
         </div>
@@ -82,72 +121,80 @@
 
     <!-- 主內容區 -->
     <section class="products-preview">
-        <div class="container">
-            <div class="product-content">
-                <h2 class="product-title animate-fade mb-5">產品介紹</h2>
-                <div class="row justify-content-center g-5 align-items-stretch">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="product-item animate-fade text-center">
-                            <img src="/dyfenco-web/IMG/solder.webp" alt="銲接材料" class="img-fluid">
-                            <h3><a href="Welding Materials.html" class="text-decoration-none text-dark">銲接材料</a></h3>
-                        </div>
+        <div class="product-content">
+            <h2 class="product-title animate-fade mb-5">產品介紹</h2>
+            <div class="row justify-content-center g-5 align-items-stretch animate-fade">
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="text-center">
+                        <a href="/dyfenco/Welding Materials.html" class="product-link text-decoration-none">
+                            <div class="product-item text-center position-relative">
+                                <img src="/dyfenco/IMG/solder.webp" alt="銲接材料" class="product-img">
+                                <div class="overlay">查看更多</div>
+                            </div>
+                        </a>
+                        <h3 class="text-decoration-none product-name-outside">銲接材料</h3>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="product-item animate-fade text-center">
-                            <img src="/dyfenco-web/IMG/electronic-grade-cleaner.webp" alt="電子級化學品" class="img-fluid">
-                            <h3><a href="ElectronicGradeChemicals.html" class="text-decoration-none text-dark">電子級化學品</a></h3>
-                        </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="text-center">
+                        <a href="/dyfenco/ElectronicGradeChemicals.html" class="product-link text-decoration-none text-dark">
+                            <div class="product-item text-center position-relative">
+                                <img src="/dyfenco/IMG/electronic-grade-cleaner.webp" alt="電子化學品" class="img-fluid">
+                                <div class="overlay">查看更多</div>
+                            </div>
+                        </a>
+                        <h3 class="text-decoration-none product-name-outside">電子化學品</h3>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="product-item animate-fade text-center">
-                            <img src="/dyfenco-web/IMG/smt-adhesives-1.webp" alt="表面構裝技術用接著劑" class="img-fluid">
-                            <h3><a href="SMT.html" class="text-decoration-none text-dark">表面構裝技術用接著劑</a></h3>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="product-item animate-fade text-center">
-                            <img src="/dyfenco-web/IMG/solder-preform.webp" alt="預鑄銲接材料" class="img-fluid">
-                            <h3><a href="Solder Preforms.html" class="text-decoration-none text-dark">預鑄銲接材料</a></h3>
-                        </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="text-center">
+                        <a href="/dyfenco/Solder Preforms.html" class="product-link text-decoration-none text-dark">
+                            <div class="product-item text-center position-relative">
+                                <img src="/dyfenco/IMG/solder-preform.webp" alt="預鑄銲接材料" class="img-fluid">
+                                <div class="overlay">查看更多</div>
+                            </div>
+                        </a>
+                        <h3 class="text-decoration-none product-name-outside">預鑄銲接材料</h3>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-   <!-- 頁腳 -->
+    <!-- 頁腳 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <!-- 左側 LOGO -->
                 <div class="footer-logo-wrap">
                     <a href="index.html">
-                        <img src="/dyfenco-web/IMG/logo.png" alt="DYFENCO Logo" class="footer-logo">
+                        <img src="/dyfenco/IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
                     </a>
                 </div>
 
                 <!-- 右側連結 -->
                 <div class="footer-links">
                     <div class="footer-column">
-                        <a href="/dyfenco-web/about.html">關於岱暉</a>
+                        <a href="/dyfenco/about.html">關於岱暉</a>
                     </div>
                     <div class="footer-column">
-                        <a href="/dyfenco-web/products.html">產品資訊</a>
+                        <a href="/dyfenco/products.html">產品資訊</a>
                     </div>
                     <div class="footer-column">
-                        <a href="/dyfenco-web/contect.html">聯絡我們</a>
+                        <a href="/dyfenco/contect.html">聯絡我們</a>
                     </div>
                 </div>
+
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2025 岱暉股份有限公司 All rights reserved.</p>
-                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜E-mail：leadfree@dyfenco.com</p>
+                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜FAX : 07-6161639｜E-mail：leadfree@dyfenco.com</p>
             </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/dyfenco-web/JS/main.js"></script>
+    <script src="/dyfenco/JS/main.js"></script>
 </body>
 
 </html>
