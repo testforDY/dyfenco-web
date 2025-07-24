@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>岱暉股份有限公司</title>
+    <title>產品 | 岱暉股份有限公司</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/dyfenco-web/CSS/ElectronicGradeChemicals.css">
     <style>
@@ -41,6 +41,29 @@
             }
         }
     </style>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .products-preview {
+            background-color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding-top: 60px;
+        }
+
+        .footer-bottom {
+            color: #7C2E24;
+            text-align: center;
+            padding: 20px;
+            font-size: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -48,8 +71,8 @@
     <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
         <div class="container">
             <!-- 左側 Logo 與名稱 -->
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="/dyfenco-web/IMG/logo.png" height="60" class="me-2" />
+            <a class="navbar-brand d-flex align-items-center" href="/dyfenco-web/index.html">
+                <img src="/dyfenco-web/IMG/岱暉英文logo.png" height="60" class="me-2" />
             </a>
 
             <!-- 導覽列開關（手機） -->
@@ -62,389 +85,100 @@
                 <!-- 中間選單 -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/about.html">關於岱暉</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            關於岱暉
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/dyfenco-web/about.html">公司簡介</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-goal.html">我們的目標</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-lab.html">實驗室介紹</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products.html">產品介紹</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contect.html">聯絡資訊</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contact.html">聯絡資訊</a></li>
                 </ul>
 
                 <!-- 右側搜尋欄與語言切換 -->
-                <form class="d-flex align-items-center gap-2" role="search">
+                <form class="d-flex align-items-center gap-3" role="search">
                     <input class="form-control" type="search" placeholder="搜尋...">
-                    <select onchange="location.href=this.value" class="form-select w-auto">
-                        <option value="/dyfenco-web/index.html" selected>繁體中文</option>
-                        <option value="/dyfenco-web/index-en.html">English</option>
-                        <option value="/dyfenco-web/index-ja.html">日本語</option>
-                    </select>
+
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="/dyfenco-web/IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="ElectronicGradeChemicals.html" selected>繁體中文</a></li>
+                            <li><a href="ElectronicGradeChemicals.-en.html">English</a></li>
+                            <li><a href="ElectronicGradeChemicals.-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
                 </form>
             </div>
         </div>
     </header>
-    <section class="products-preview">
-        <div class="container">
-            <div class="row">
-                <!-- 左側分類清單 -->
-                <div class="col-md-3 mb-4">
-                    <div class="p-3 rounded shadow-sm" style="background-color: #FAF4F0;">
-                        <h5 class="material-title text-center py-2 mb-3" style="border-radius: 6px;">
-                            電子級化學品
-                        </h5>
-                        <div class="nav flex-column nav-pills" id="product-tabs" role="tablist"
-                            aria-orientation="vertical">
-                            <button class="nav-link active" id="v-pills-solderpaste-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-solderpaste" type="button" role="tab"
-                                aria-controls="v-pills-solderpaste" aria-selected="true">
-                                液體助銲劑
-                            </button>
-                            <button class="nav-link" id="v-pills-solderbar-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-solderbar" type="button" role="tab"
-                                aria-controls="v-pills-solderbar" aria-selected="false">
-                                電子產品清潔劑
-                            </button>
-                            <button class="nav-link" id="v-pills-solderwire-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-solderwire" type="button" role="tab"
-                                aria-controls="v-pills-solderwire" aria-selected="false">
-                                助銲膏
-                            </button>
-                        </div>
-                    </div>
+
+    <section class="container py-5">
+        <h1 class="text-center mb-5 fw-bold" style="color: #7C2E24;">液體助銲劑</h1>
+        <div class="product-detail">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <img src="/dyfenco-web/IMG/liquid-flux.webp" alt="液體助銲劑" class="img-fluid rounded shadow">
                 </div>
-
-                <!-- 右側內容區塊 -->
-                <div class="col-md-9">
-                    <div class="tab-content" id="v-pills-tabContent">
-                        <!-- 錫膏 -->
-                        <div class="tab-pane fade show active" id="v-pills-solderpaste" role="tabpanel">
-                            <h2 class="mb-4 text-primary fw-bold">液體助銲劑</h2>
-                            <p class="mb-4 fs-5">適用於波峰銲接、免洗系統、水基型與多層板等應用，具高電可靠性與低殘留特性。</p>
-
-                            <!-- 波峰銲接系統 -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">波峰銲接系統</h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>說明</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>無鹵</td>
-                                                    <td>零鹵含量、高電可靠性、銲後殘留物非常少</td>
-                                                    <td>ZHF7600</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>廣泛製程適用</td>
-                                                    <td>零鹵化學配方，兼容性高</td>
-                                                    <td>K6</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 免洗型助銲劑 -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">免洗型助銲劑</h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>說明</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>通用性高</td>
-                                                    <td>可適用各類銲墊，廣受歡迎</td>
-                                                    <td>K8418A</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>無白色殘留</td>
-                                                    <td>適用於單邊 PCB 銲接</td>
-                                                    <td>K8418B</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>QFP高密度應用</td>
-                                                    <td>細針腳、高密度元件適用</td>
-                                                    <td>K8600</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>無松香型</td>
-                                                    <td>高活性、低固含、低殘留</td>
-                                                    <td>K500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>雙波峰銲接</td>
-                                                    <td>完全鈍化助銲配方，銲接性良好</td>
-                                                    <td>LF970</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 無揮發性有機物 -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">無揮發性有機物助銲劑</h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>說明</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>環保水基型</td>
-                                                    <td>無揮發性有機物，高可靠性與低殘留</td>
-                                                    <td>VOC228</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 浸潤系統 -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">浸潤系統</h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>說明</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>應用於變壓器產業</td>
-                                                    <td>高效浸潤設計，適用於 PCB 銲接</td>
-                                                    <td>TF15</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>電源應用</td>
-                                                    <td>抗高電壓、適用電源系統產業</td>
-                                                    <td>WH2208</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 噴錫助銲劑系統 -->
-                            <div class="card border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">噴錫助銲劑系統</h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>說明</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>通用性高</td>
-                                                    <td>可應用於單邊 PCB、各類銲墊</td>
-                                                    <td>WA2018</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-solderbar" role="tabpanel">
-                            <h2 class="mb-4 text-primary fw-bold">電子產品清潔劑</h2>
-                            <p class="fs-5">採用獨特配方，作為氯氟烴或空氣有害物清潔劑之替代，具備高效性、穩定性與可預測性，適用於多種製程清潔需求。</p>
-
-                            <!-- 溶劑型清潔劑 -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">溶劑型清潔劑<br><small
-                                            class="text-muted">(適用於手動擦拭與噴射清潔系統)</small></h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>高效能與安全可靠之鋼板清潔劑</td>
-                                                    <td>SMT Cleaner 128</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>高效率快速反應性清潔劑</td>
-                                                    <td>PCB127A</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>高強度、非氯化型清潔劑</td>
-                                                    <td>5018</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 水基型清潔劑 -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">水基型清潔劑<br><small
-                                            class="text-muted">(適用於整批浸泡與線上清潔系統)</small></h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>針對汽車產業設計之無有害物、具有生物降解性之配方</td>
-                                                    <td>WSC742</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-solderwire" role="tabpanel">
-                            <h2 class="mb-4 text-primary fw-bold">助銲膏</h2>
-                            <p class="fs-5">非腐蝕性助銲膏，適用於球柵陣列封裝（BGA）、重工維修、PCB構裝等多元應用。</p>
-
-                            <!-- 無鹵助銲膏 -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">無鹵助銲膏<br><small
-                                            class="text-muted">適用於無鉛合金（錫銀銅、錫銅系統）</small></h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>高可靠度電子級設計、適合BGA封裝修復</td>
-                                                    <td>QT459DE</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>低孔洞、穩定黏度、低殘留物</td>
-                                                    <td>DWQ401</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 免洗型助銲膏（無鉛） -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">免洗型助銲膏<br><small
-                                            class="text-muted">適用於無鉛合金（錫銀銅、錫銅系統）</small></h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>電子級高可靠度、極佳濕潤性</td>
-                                                    <td>PN436</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>相容大多數製程參數，濕潤性優異</td>
-                                                    <td>PN436T</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 免洗型助銲膏（錫鉛） -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">免洗型助銲膏<br><small
-                                            class="text-muted">適用於錫鉛合金（Sn/Pb、Sn/Pb/Ag）</small></h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>適合SMT重工製程，銲點光亮、殘留潔白透明</td>
-                                                    <td>AM218FT</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 免洗型助銲膏（低溫） -->
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary mb-3">免洗型助銲膏<br><small
-                                            class="text-muted">適用於低溫合金（Sn/Bi、Sn/Bi/Ag）</small></h4>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered align-middle">
-                                            <thead class="table-primary text-center">
-                                                <tr>
-                                                    <th>特性</th>
-                                                    <th>對應型號</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>高活性、低殘留、印刷特性優異</td>
-                                                    <td>XT963</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <p>岱暉液體助銲劑系列適用於波峰銲接、免洗製程與環保應用，提供穩定性與可靠性兼具的解決方案。</p>
+                    <ul>
+                        <li><strong>波峰銲接：</strong> ZHF7600、K6</li>
+                        <li><strong>免洗型高兼容性：</strong> K8418A、K8418B、K8600、K500、LF970</li>
+                        <li><strong>水基型無VOC：</strong> VOC228</li>
+                        <li><strong>浸潤型：</strong> TF15、WH2208</li>
+                        <li><strong>噴錫應用：</strong> WA2018</li>
+                    </ul>
+                    <a href="/dyfenco-web/PDF/leadfree_spec.pdf" class="btn btn-outline-primary btn-sm" download>技術資料下載</a>
                 </div>
             </div>
+        </div>
+        <hr class="my-5">
+        <h1 class="text-center mb-5 fw-bold" style="color: #7C2E24;">助焊膏</h1>
+        <div class="product-detail">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <img src="/dyfenco-web/IMG/tacky-flux.webp" alt="助焊膏" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <p>岱暉助銲膏適用於 BGA 封裝、PCB 構裝與低溫/高密度元件修復，具備高活性與低殘留特性。</p>
+                    <ul>
+                        <li><strong>無鹵高可靠度：</strong> QT459DE、DWQ401</li>
+                        <li><strong>免洗無鉛：</strong> PN436、PN436T</li>
+                        <li><strong>免洗錫鉛：</strong> AM218FT</li>
+                        <li><strong>免洗低溫合金：</strong> XT963</li>
+                    </ul>
+                    <a href="/dyfenco-web/PDF/leadfree_spec.pdf" class="btn btn-outline-primary btn-sm" download>技術資料下載</a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-5">
+        <h1 class="text-center mb-5 fw-bold" style="color: #7C2E24;">電子產品清潔劑</h1>
+        <div class="product-detail">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <img src="/dyfenco-web/IMG/electronic-cleaner.webp" alt="清潔劑" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <p>岱暉電子產品清潔劑採用獨特配方，作為氯氟烴或其他空氣有害物質清潔劑的替代方案。產品設計著重於高效性、穩定性與可預測性，廣泛應用於電子製造、汽車產業與 SMT 製程等多種清潔需求。</p>
+                    <ul>
+                        <li><strong>類型：</strong> 溶劑型、水基型</li>
+                        <li><strong>應用方式：</strong> 擦拭、噴射、浸泡、線上清洗</li>
+                        <li><strong>環保特性：</strong> 無有害物質、生物可分解性</li>
+                    </ul>
+                    <p><strong>適用範圍：</strong> PCB、鋼板、汽車零件、SMT 鋼板等清潔作業</p>
+                    <a href="/dyfenco-web/PDF/leadfree_spec.pdf" class="btn btn-outline-primary btn-sm" download>技術資料下載</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-end mt-5">
+            <a href="/dyfenco-web/products.html" class="text-decoration-none">&larr; 回產品一覽</a>
         </div>
     </section>
 
@@ -455,7 +189,7 @@
                 <!-- 左側 LOGO -->
                 <div class="footer-logo-wrap">
                     <a href="/dyfenco-web/index.html">
-                        <img src="/dyfenco-web/IMG/logo.png" alt="DYFENCO Logo" class="footer-logo">
+                        <img src="/dyfenco-web/IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
                     </a>
                 </div>
 
@@ -475,13 +209,10 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 岱暉股份有限公司 All rights reserved.</p>
-                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜E-mail：leadfree@dyfenco.com</p>
+                <p>地址：高雄市燕巢區四林路136號｜TEL：07-6160317｜FAX : 07-6161639｜E-mail：leadfree@dyfenco.com</p>
             </div>
         </div>
     </footer>
-    <a href="/dyfenco-web/products.html" class="back-to-products-btn">
-        ← 返回產品總覽
-    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/dyfenco-web/JS/main.js"></script>
 </body>
