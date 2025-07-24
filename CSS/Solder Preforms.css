@@ -20,8 +20,9 @@ body {
 
 /* ===== 導覽列與 LOGO 分離樣式 ===== */
 .navbar-brand img {
-    height: 70px;
-    width: auto;
+    max-height: 60px;
+    max-width: 250px;
+    object-fit: contain;
 }
 
 header.navbar {
@@ -81,43 +82,94 @@ header.navbar {
     text-align: center;
 }
 
-/* 預鑄銲接材料區塊 */
-.products-preview {
-    background-color: #fffdfb;
-    padding: 60px 15px;
+.language-dropdown .language-btn {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.products-preview h2 {
-    font-size: 3rem;
-    color: #7C2E24 !important;
+.language-dropdown .language-btn:hover {
+    transform: scale(1.15);
 }
 
-.products-preview img {
-    max-width: 70%;
-    height: auto;
+.language-dropdown .language-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.language-dropdown .language-menu.active {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.product-caption {
-    font-size: 1rem;
-    color: #555;
-    text-align: center;
-    margin-top: -20px;
-    margin-bottom: 30px;
-    font-style: italic;
-    opacity: 0.85;
+.language-dropdown .language-menu li {
+    padding: 10px 20px;
+    white-space: nowrap;
 }
 
-.products-preview p {
-    font-size: 1.5rem !important;
+.language-dropdown .language-menu li a {
+    text-decoration: none;
     color: #333;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+}
+
+.language-dropdown .language-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* ==== 詳細資訊  ==== */
+.product-detail h1 {
+    font-size: 1.25rem;
+    color: #7C2E24;
+}
+
+.product-detail p {
+    font-size: 1.25rem;
+}
+
+.product-detail ul {
+    font-size: 1.25rem;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+}
+
+.product-detail img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.btn-outline-primary {
+    color: #7C2E24;
+    font-size: 1rem;
+    border-color: #7C2E24;
+}
+
+.btn-outline-primary:hover {
+    background-color: #7C2E24;
+    color: white;
+}
+
+a {
+    color: #7C2E24;
+    font-size: 1.25rem;
+}
+
+a:hover {
+    color: #5e1e1a;
 }
 
 /* ===== 頁腳區塊 ===== */
@@ -139,7 +191,7 @@ header.navbar {
 
 .footer-logo {
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     height: auto;
 }
 
