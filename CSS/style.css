@@ -148,12 +148,24 @@ header.navbar {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     border: none;
     padding: 10px 0;
+    white-space: nowrap;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.dropdown-item {
+    white-space: nowrap;
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-size: 16px;
 }
 
 /* ===== Hero 區塊（大圖區） ===== */
 .hero-section {
     min-height: 100vh;
-    background-image: url("/dyfenco-web/IMG/hero1.jpg");
+    background-image: url("../IMG/hero1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -238,6 +250,38 @@ header.navbar {
     box-shadow: none;
 }
 
+/* ==== HP ====*/
+.certification-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-title {
+    color: #7C2E24;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #555;
+}
+
+.certification-image-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+.certification-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* ===== News ======*/
 .news-bar {
     background-color: #f5f5f5;
@@ -297,7 +341,6 @@ header.navbar {
 
 .bannerbtn-primary {
     background-color: #7C2E24;
-    /* 橘色 */
     border: none;
     color: white;
     font-weight: bold;
@@ -341,7 +384,6 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
-    background-color: #fff;
     object-fit: contain;
 }
 
@@ -367,6 +409,7 @@ body {
 /* 熱門產品區塊樣式 */
 .hot-products {
     background-color: #fff;
+    border-bottom: 1px solid #ddd;
 }
 
 .hot-products .section-title {
