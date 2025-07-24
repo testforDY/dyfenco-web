@@ -153,13 +153,13 @@ header.navbar {
 }
 
 .btn-outline-primary {
-    color: #7C2E24;
+    color: #D2691E;
     font-size: 1rem;
-    border-color: #7C2E24;
+    border-color: #D2691E;
 }
 
 .btn-outline-primary:hover {
-    background-color: #7C2E24;
+    background-color: #D2691E;
     color: white;
 }
 
