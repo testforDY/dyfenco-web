@@ -152,6 +152,12 @@ header.navbar {
     background-color: #f0f0f0;
 }
 
+.dropdown-menu .dropdown-item {
+    padding: 12px 20px;
+    font-weight: 500;
+    color: #333;
+}
+
 /* ===== 產品介紹區塊 ===== */
 .products-preview {
     background-color: #fff;
