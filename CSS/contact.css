@@ -138,6 +138,13 @@ header.navbar {
     background-color: #f0f0f0;
 }
 
+.dropdown-menu .dropdown-item {
+    padding: 12px 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* === contact ===*/
 .contact-section {
     background-color: var(--white);
     padding: 80px 20px;
@@ -184,6 +191,7 @@ header.navbar {
     color: #fff;
 }
 
+/* === footer ===*/
 .footer {
     background-color: #f8f8f8;
     padding-top: 60px;
