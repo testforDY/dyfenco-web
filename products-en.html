@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products | Dyfenco International Co., Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/products.css">
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: #1a237e;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background: #fff;
+                padding: 10px 0;
+            }
+
+            .navbar nav.active {
+                display: flex;
+            }
+        }
+    </style>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .products-preview {
+            background-color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding-top: 60px;
+        }
+
+        .footer-bottom {
+            color: #7C2E24;
+            text-align: center;
+            padding: 20px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
+        <div class="container">
+            <!-- 左側 Logo 與名稱 -->
+            <a class="navbar-brand d-flex align-items-center" href="index-en.html">
+                <img src="IMG/岱暉英文logo.png" height="60" class="me-2" />
+            </a>
+
+            <!-- 導覽列開關（手機） -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 導覽列內容 -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+                <!-- 中間選單 -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="index-en.html">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about-en.html">Company Profile</a></li>
+                            <li><a class="dropdown-item" href="about-goal-en.html">Our Mission</a></li>
+                            <li><a class="dropdown-item" href="about-lab-en.html">MORE LAB</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="products-en.html">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="contact-en.html">CONTACT</a></li>
+                </ul>
+
+                <!-- 右側搜尋欄與語言切換 -->
+                <form class="d-flex align-items-center gap-3" role="search">
+                    <input class="form-control" type="search" placeholder="Search...">
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="products.html">繁體中文</a></li>
+                            <li><a href="products-en.html" selected>English</a></li>
+                            <li><a href="products-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主內容區 -->
+    <section class="products-preview">
+        <div class="product-content">
+            <h2 class="product-title animate-fade mb-5">Products</h2>
+            <div class="row justify-content-center g-5 align-items-stretch animate-fade">
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="text-center">
+                        <a href="Welding Materials-en.html" class="product-link text-decoration-none">
+                            <div class="product-item text-center position-relative">
+                                <img src="IMG/solder.webp" alt="Solder" class="product-img">
+                                <div class="overlay">LEARN MORE</div>
+                            </div>
+                        </a>
+                        <h3 class="text-decoration-none product-name-outside">Solder</h3>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="text-center">
+                        <a href="ElectronicGradeChemicals-en.html" class="product-link text-decoration-none text-dark">
+                            <div class="product-item text-center position-relative">
+                                <img src="IMG/electronic-grade-cleaner.webp" alt="Electronic Grade Chemical"
+                                    class="img-fluid">
+                                <div class="overlay">LEARN MORE</div>
+                            </div>
+                        </a>
+                        <h3 class="text-decoration-none product-name-outside">Electronic Grade Chemical</h3>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="text-center">
+                        <a href="Solder Preforms-en.html" class="product-link text-decoration-none text-dark">
+                            <div class="product-item text-center position-relative">
+                                <img src="IMG/solder-preform.webp" alt="Solder Preforms" class="img-fluid">
+                                <div class="overlay">LEARN MORE</div>
+                            </div>
+                        </a>
+                        <h3 class="text-decoration-none product-name-outside">Solder Preforms</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- 左側 LOGO -->
+                <div class="footer-logo-wrap">
+                    <a href="index-en.html">
+                        <img src="IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
+                    </a>
+                </div>
+                <!-- 右側連結 -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="about-en.html">About Us</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="products-en.html">Products</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="contect-en.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dyfenco International Co., Ltd. All rights reserved.</p>
+                <p>No. 136, Silin Rd., Yanchao Dist., Kaohsiung City 824, Taiwan (R.O.C.)｜TEL：+886 7
+                    6160317｜FAX：+886 7 6161639｜E-mail：leadfree@dyfenco.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
