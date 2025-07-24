@@ -132,6 +132,12 @@ header.navbar {
     background-color: #f0f0f0;
 }
 
+.dropdown-menu .dropdown-item {
+    padding: 12px 20px;
+    font-weight: 500;
+    color: #333;
+}
+
 /* ===== About 區塊 ===== */
 .about-section {
     background-color: #fff;
