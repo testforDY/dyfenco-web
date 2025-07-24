@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dyfenco International Co., Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/lab.css">
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            width: 30px;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: #1a237e;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .navbar nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background: #fff;
+                padding: 10px 0;
+            }
+
+            .navbar nav.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header class="navbar navbar-expand-lg my-hero border-bottom py-3">
+        <div class="container">
+            <!-- 左側 Logo 與名稱 -->
+            <a class="navbar-brand d-flex align-items-center" href="index-en.html">
+                <img src="IMG/岱暉英文logo.png" height="60" class="me-2" />
+            </a>
+
+            <!-- 導覽列開關（手機） -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 導覽列內容 -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+                <!-- 中間選單 -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="index-en.html">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about-en.html">Company Profile</a></li>
+                            <li><a class="dropdown-item" href="about-goal-en.html">Our Mission</a></li>
+                            <li><a class="dropdown-item" href="about-lab-en.html">MORE LAB</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="products-en.html">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="contact-en.html">CONTACT</a></li>
+                </ul>
+
+                <!-- 右側搜尋欄與語言切換 -->
+                <form class="d-flex align-items-center gap-3" role="search">
+                    <input class="form-control" type="search" placeholder="Search...">
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="lab.html">繁體中文</a></li>
+                            <li><a href="lab-en.html" selected>English</a></li>
+                            <li><a href="lab-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="lab-section text-center text-white py-5 position-relative">
+        <div class="container">
+            <h2 class="lab-title mb-4 animate-fade">MORE LAB</h2>
+            <p class="lab-description mb-5 animate-fade">
+                <Strong>The MORE Electronic Lab (Do More, See More, Check more) by Dyfenco was established in 2012. <br>
+                    The MORE Lab has well completed IPC detection system, providing customers with more strong technical
+                    support and PCBA reliability and failure analysis service.</Strong>
+            </p>
+            <div class="row g-5 justify-content-center animate-fade">
+                <div class="col-md-4">
+                    <img src="IMG/pic1.jpg" class="lab-img img-fluid shadow rounded" alt="實驗室1">
+                </div>
+                <div class="col-md-4">
+                    <img src="IMG/pic2.png" class="lab-img img-fluid shadow rounded" alt="實驗室2">
+                </div>
+                <div class="col-md-4">
+                    <img src="IMG/pic3.png" class="lab-img img-fluid shadow rounded" alt="實驗室3">
+                </div>
+            </div>
+            <h2 class="equipment-title text-center fw-bold mt-5 animate-fade">Quality Inspection Equipment
+            </h2>
+            <div class="row g-5 justify-content-center animate-fade">
+                <div class="col-md-4">
+                    <div class="equipment-card">
+                        <img src="IMG/equipment1.png" class="img-fluid rounded" alt="器材1">
+                        <p class="equipment-description">Optical Emission Spectrometer</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment7.jpg" class="img-fluid rounded" alt="器材7">
+                        <p class="equipment-description mb-5">High resistance meter
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment3.png" class="img-fluid rounded" alt="器材3">
+                        <p class="equipment-description mb-5"> Laser Diffraction Particle Size Distribution Analyzer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment13.jpg" class="img-fluid rounded" alt="器材13">
+                        <p class="equipment-description mb-5">Automatic dispenser
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment5.jpg" class="img-fluid rounded" alt="器材5">
+                        <p class="equipment-description mb-5">Digital Viscometer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment6.jpg" class="img-fluid rounded" alt="器材6">
+                        <p class="equipment-description mb-5">Karl Fischer Moisture Analyzer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment4.png" class="img-fluid rounded" alt="器材4">
+                        <p class="equipment-description mb-5">Spiral Viscometer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card">
+                        <img src="IMG/equipment8.jpg" class="img-fluid rounded" alt="器材8">
+                        <p class="equipment-description mb-5">Programmable Temperature & Humidity Tester
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment9.jpg" class="img-fluid rounded" alt="器材9">
+                        <p class="equipment-description mb-5">Thermal Shock Ramp Tester
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment10.png" class="img-fluid rounded" alt="器材10">
+                        <p class="equipment-description mb-5">Differential Scanning Calorimetry
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment11.jpg" class="img-fluid rounded" alt="器材11">
+                        <p class="equipment-description mb-5">Inductively Coupled Plasma - Optical Emission Spectrometer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment12.jpg" class="img-fluid rounded" alt="器材12">
+                        <p class="equipment-description mb-5">Ion Chromatography System
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="equipment-card"><img src="IMG/equipment2.jpg" class="img-fluid rounded" alt="器材2">
+                        <p class="equipment-description mb-5">Solder Paste Analyzer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="summary text-center text-white py-5">
+        <p class="summary-text">
+            MORE Lab can providing at least 18 IPC / JIS Standard Test Items
+            <br class="d-none d-md-block">
+            and PCBA reliability analysis.
+        </p>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- 左側 LOGO -->
+                <div class="footer-logo-wrap">
+                    <a href="index-en.html">
+                        <img src="IMG/岱暉英文logo.png" alt="DYFENCO Logo" class="footer-logo">
+                    </a>
+                </div>
+                <!-- 右側連結 -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="about-en.html">About Us</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="products-en.html">Products</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="contect-en.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dyfenco International Co., Ltd. All rights reserved.</p>
+                <p>No. 136, Silin Rd., Yanchao Dist., Kaohsiung City 824, Taiwan (R.O.C.)｜TEL：+886 7
+                    6160317｜FAX：+886 7 6161639｜E-mail：leadfree@dyfenco.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
