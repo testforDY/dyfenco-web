@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dyfenco International Co., Ltd.</title>
+    <title>ABOUT | Dyfenco International Co., Ltd.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/dyfenco-web/CSS/about.css">
     <style>
@@ -62,50 +62,98 @@
                 <!-- 中間選單 -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/index-en.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/about-en.html">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products-en.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contect-en.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-5 px-3" href="#" data-bs-toggle="dropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-en.html">Company Profile</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-goal-en.html">Our Mission</a></li>
+                            <li><a class="dropdown-item" href="/dyfenco-web/about-lab-en.html">MORE LAB</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/products-en.html">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/dyfenco-web/contact-en.html">CONTACT</a></li>
                 </ul>
 
                 <!-- 右側搜尋欄與語言切換 -->
-                <form class="d-flex align-items-center gap-2" role="search">
-                    <input class="form-control" type="search" placeholder="Serch...">
-                    <select onchange="location.href=this.value" class="form-select w-auto">
-                        <option value="/dyfenco-web/about.html">繁體中文</option>
-                        <option value="/dyfenco-web/about-en.html" selected>English</option>
-                        <option value="/dyfenco-web/about-ja.html">日本語</option>
-                    </select>
+                <form class="d-flex align-items-center gap-3" role="search">
+                    <input class="form-control" type="search" placeholder="Search...">
+                    <!-- 語言選單：改為圖片 + 下拉 -->
+                    <div class="language-dropdown position-relative">
+                        <img src="/dyfenco-web/IMG/boxs49.svg" alt="language icon" class="language-btn"
+                            style="width: 32px; height: 32px; cursor: pointer;">
+                        <ul class="language-menu position-absolute end-0">
+                            <li><a href="/dyfenco-web/about.html">繁體中文</a></li>
+                            <li><a href="/dyfenco-web/about-en.html" selected>English</a></li>
+                            <li><a href="/dyfenco-web/about-ja.html">日本語</a></li>
+                        </ul>
+                    </div>
                 </form>
             </div>
         </div>
     </header>
 
     <!-- About 主內容區 -->
-    <section class="about-section text-white text-center position-relative">
-        <div class="container position-relative z-1 py-5 animate-fade">
-            <h2 class="about-title fw-bold mb-4">About Dyfenco</h2>
-            <p class="about-description fw-medium lh-lg px-3">
-                Dyfenco Co., Ltd., founded in 1979, was established by a team of experts with extensive experience in
-                materials science and packaging processes. We specialize in the R&D and manufacturing of electronic
-                soldering materials, providing high-quality and reliable raw materials to the global electronics
-                industry.
+    <section class="about-section position-relative">
+        <div id="about-tabs" class="section-tabs position-absolute top-0 end-0 pe-4 pt-3">
+            <span class="tab-item active">Company Profile</span>
+            <span class="tab-separator">/</span>
+            <span class="tab-item">Our Mission</span>
+            <span class="tab-separator">/</span>
+            <span class="tab-item">MORE LAB</span>
+        </div>
+        <div
+            class="container container-flex d-flex flex-wrap align-items-center justify-content-center gap-4 py-5 animate-fade">
+            <div class="about-img-wrapper">
+                <img src="/dyfenco-web/IMG/CompanyProfile_1.jpg" alt="公司介紹圖" class="about-img">
+            </div>
+
+            <div class="about-text-wrapper">
+                <h2 class="about-title">About Dyfenco</h2>
+                <p class="about-description">
+                    <strong>Dyfenco Co., Ltd.</strong>
+                    was established in 1979 by a team of experts with extensive experience in
+                    materials science and packaging processes. The company specializes in the research, development, and
+                    manufacturing of electronic soldering materials, continuously providing high-quality and reliable
+                    raw materials for the global electronics industry.
+                </p>
+                <p class="about-description">
+                    Our product range includes Solder Paste, Solder Wire, Solder Bar, Flux, Tin Anodes, Solder Preforms,
+                    and Electronic packaging adhesives. These products are widely applied in advanced manufacturing
+                    processes such as PCB assembly, automotive electronics, LED, semiconductor packaging, personal
+                    computers, and communication devices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="global-map-section text-center py-3 animate-fade">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="global-title mb-4">Global Operations</h2>
+                    <p class="global-description">
+                        We are actively expanding our global footprint while strengthening localized services.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <img src="/dyfenco-web/IMG/CompanyProfile_2.png" alt="全球據點地圖" class="img-fluid d-block mx-auto my-3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-summary text-center text-white py-5">
+        <div class="container">
+            <p class="summary-text">
+                We’re committed to quality and innovation — <br class="d-none d-md-block">
+                the foundation of lasting partnerships.
             </p>
-            <p class="about-description fw-medium lh-lg px-3">
-                Our product range includes solder paste, solder wire, solder bar, flux, tin anodes, preform solder, and
-                electronic packaging adhesives, widely applied in advanced manufacturing such as PCB assembly,
-                automotive electronics, LED, semiconductor packaging, PCs, and communication devices.
-            </p>
-            <p class="about-description fw-medium lh-lg px-3">
-                With operations in Taiwan, China, Vietnam, and India, we are continuously expanding our global footprint
-                and enhancing localized support. In 2012, we established the MORE Electronics Laboratory, which follows
-                IPC international standards to offer full-scale product testing, application validation, and process
-                simulation.
-            </p>
-            <p class="about-description fw-medium lh-lg px-3">
-                We firmly believe that consistent quality, continuous innovation, and deep technical expertise are the
-                keys to becoming a trusted long-term partner.
-            </p>
-            <img src="/dyfenco-web/IMG/CompanyProfile_2.png" alt="公司介紹圖" class="about-img img-fluid mt-5 rounded shadow">
         </div>
     </section>
 
@@ -135,7 +183,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Dyfenco International Co., Ltd. All rights reserved.</p>
                 <p>No. 136, Silin Rd., Yanchao Dist., Kaohsiung City 824, Taiwan (R.O.C.)｜TEL：+886 7
-                    6160317｜E-mail：leadfree@dyfenco.com</p>
+                    6160317｜FAX：+886 7 6161639｜E-mail：leadfree@dyfenco.com</p>
             </div>
         </div>
     </footer>
