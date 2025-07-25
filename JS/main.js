@@ -114,6 +114,7 @@ window.addEventListener("DOMContentLoaded", () => {
       })
       .join('');
   }
+  
   fetch('search-data.json')
     .then(response => response.json())
     .then(data => {
