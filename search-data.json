@@ -1,52 +1,12 @@
 [
-    {
-        "title": "關於我們",
-        "url": "about.html",
-        "content": "Dyfenco International Co., Ltd. 成立於 1979 年，專注研發生產各類錫膏、錫線、錫條與電子化學品。"
-    },
-    {
-        "title": "使命 (Mission)",
-        "url": "about-mission.html",
-        "content": "瞄準綠色電子組裝流程提供全方位解決方案，服務全球客戶。"
-    },
-    {
-        "title": "產品 – Solder Paste",
-        "url": "products/solder-paste.html",
-        "content": "錫膏產品，涵蓋無鉛與高可靠性材料，適用於電子製造。"
-    },
-    {
-        "title": "產品 – Solder Wire",
-        "url": "products/solder-wire.html",
-        "content": "各式錫線，符合 RoHS 規範並用於精密組裝應用。"
-    },
-    {
-        "title": "產品 – Solder Bar",
-        "url": "products/solder-bar.html",
-        "content": "錫條，適用於需大量熔煉的焊接操作。"
-    },
-    {
-        "title": "產品 – Liquid Flux",
-        "url": "products/liquid-flux.html",
-        "content": "電子級液體助焊劑，提升焊接品質並支持環保標準。"
-    },
-    {
-        "title": "產品 – Electronic Cleaner",
-        "url": "products/electronic-cleaner.html",
-        "content": "電子清潔劑，用於 PCB 脫脂與清潔用途。"
-    },
-    {
-        "title": "產品 – SMT Adhesives",
-        "url": "products/smt-adhesives.html",
-        "content": "SMT 黏著劑，強化組件固定性能與可靠度。"
-    },
-    {
-        "title": "產品 – Solder Preforms",
-        "url": "products/solder-preforms.html",
-        "content": "預成型錫片，方便應用於特殊焊接需求。"
-    },
-    {
-        "title": "最新消息 – SEMICON TAIWAN 2025",
-        "url": "news/2025-07-15-semicon-taiwan.html",
-        "content": "Dyfenco 參加 SEMICON TAIWAN 2025 展會，展示最新高可靠性錫膏與材料。"
-    }
+  {
+    "title": "錫膏",
+    "url": "Welding Materials.html#paste",
+    "content": "SMT 製程用錫膏，具備優異印刷性與焊接可靠性。"
+  },
+  {
+    "title": "助焊劑",
+    "url": "ElectronicGradeChemicals.html#flux",
+    "content": "液體與膏狀助焊劑，提供良好潤濕與去氧化能力。"
+  }
 ]
