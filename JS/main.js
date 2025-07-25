@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", () => {
       .join('');
   }
   
-  fetch('search-data.json')
+  fetch('/dyfenco-web/search-data.json')
     .then(response => response.json())
     .then(data => {
       const input = document.getElementById('search-input');
