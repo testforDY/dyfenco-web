@@ -114,4 +114,38 @@ window.addEventListener("DOMContentLoaded", () => {
       })
       .join('');
   }
+  fetch('search-data.json')
+    .then(response => response.json())
+    .then(data => {
+      const input = document.getElementById('search-input');
+      const resultBox = document.getElementById('search-results');
+      if (!input || !resultBox) return;
+
+      input.addEventListener('input', function () {
+        const keyword = this.value.trim().toLowerCase();
+        resultBox.innerHTML = '';
+
+        if (!keyword) return;
+
+        const filtered = data.filter(item =>
+          item.title.toLowerCase().includes(keyword) ||
+          item.content.toLowerCase().includes(keyword)
+        );
+
+        if (filtered.length === 0) {
+          resultBox.innerHTML = '<li class="list-group-item">沒有找到相關內容。</li>';
+        } else {
+          filtered.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('list-group-item');
+            li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+            resultBox.appendChild(li);
+          });
+        }
+      });
+    })
+    .catch(err => console.error('搜尋資料載入失敗:', err));
 });
+
+
+
